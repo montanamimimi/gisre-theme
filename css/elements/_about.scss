@@ -1,0 +1,68 @@
+.about {
+
+    margin-top: 100px;
+
+    &__container {
+        position: relative;
+        min-height: 600px;
+        width: 100%;
+    }
+
+
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 80%;
+    }
+
+    &__text {
+        background-color: $secondary;
+        position: absolute;
+        top: 11%;
+        right: 0;
+        min-height: 70%;
+        max-width: 34%;
+        padding: 40px 30px;
+        color: white;
+    }
+
+    &__header {
+        padding-bottom: 18px;
+        color: white;
+    }
+}
+
+@media (max-width: 1040px) {
+
+    .about {
+        &__text {
+            max-width: 60%;
+            min-height: 50%;
+        }
+    }
+
+}
+
+@media (max-width: 640px) {
+
+    .about {
+
+        margin-top: 40px;
+
+        &__container {
+            min-height: 300px;
+            width: 100%;
+        }    
+
+        &__text {
+            position: static;
+            max-width: 100%;
+            min-height: 100%;
+        }
+
+        &__image {
+            display: none;
+        }
+    }
+}

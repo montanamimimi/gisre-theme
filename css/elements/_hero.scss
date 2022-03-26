@@ -1,0 +1,36 @@
+.hero {
+
+    min-height: 600px;
+
+    &__text {
+        max-width: 600px;        
+    }
+
+    &__slogan {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 50px;
+        padding-top: 30%;
+        color: $secondarydark;
+    }
+
+}
+
+
+@media (max-width: 1040px) {
+    .hero {
+        &__slogan {
+            font-size: 40px;
+            padding-left: 30px;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .hero {
+        &__slogan {
+            font-size: 30px;
+            padding-left: 30px;
+        }
+    }
+}

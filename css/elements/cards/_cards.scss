@@ -1,0 +1,38 @@
+.cards {
+    padding-top: 20px;
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: block;
+        width: 48%;
+        color: $neutral;
+        border: 1px solid $neutrallight;
+        margin: 6px;
+
+        &:hover {
+            color: $neutral;
+        }
+
+        &-container {
+            display: flex;
+            height: 100%;
+        }
+
+        &-desc {
+            padding: 20px;
+            width: 70%;
+        }
+
+        &-pic {
+            max-width: 30%;
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+}

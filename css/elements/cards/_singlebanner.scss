@@ -1,0 +1,35 @@
+.single-banner {
+    background-color: $primary;
+    min-height: 150px;
+    padding: 30px;
+
+    &__content {
+        max-width: 80%;
+        color: white;
+    }
+
+    a {
+        color: white;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    h1 {
+        color: white;
+    }
+
+    
+
+}
+
+.mainbanner {
+    min-height: 270px;
+    padding: 50px;
+    text-align: center;
+
+    &__desc p {
+        font-size: 20px;
+    }
+}

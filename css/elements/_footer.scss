@@ -1,0 +1,76 @@
+.footer {
+
+    color: $light;
+
+    &__up {
+        background-color: $neutral;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    &__sections {
+        display: flex;
+    }
+
+    &__section {
+        width: 25%;    
+    }
+
+    &__nav-header {
+        color: $light;
+        padding-left: 40px;
+        padding-bottom: 15px;
+    }
+
+    &__nav-list a {
+        color: $light;
+    }
+
+    &__nav-item {
+        list-style: none;
+    }
+
+    &__nav-p {
+        padding-left: 40px;
+        padding-bottom: 40px;
+    }
+
+    &__down {
+        background-color: $neutraldark;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 1040px) {
+    
+    .footer {
+        &__section {
+            width: 33%;
+        }
+    
+        &__partners {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+
+    .footer {
+        &__section {
+            width: 100%;
+        }
+
+        &__about, &__info, &__partners, &__nav-header {
+            display: none;
+        }
+
+        &__contacts {
+            display: flex;
+        }
+
+        &__nav-p {
+            padding: 0 20px;
+        }
+    }
+}

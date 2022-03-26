@@ -1,0 +1,23 @@
+.catlist {
+
+    background-color: $neutral;
+    padding: 10px;
+
+    &__items {
+        display: flex;
+
+        li {
+            list-style: none;
+
+            a {
+                padding: 10px;
+                color: white;
+
+                &:hover {
+                    color: $neutrallight;
+                }
+            }
+
+        }
+    }
+}
