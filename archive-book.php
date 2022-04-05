@@ -1,10 +1,11 @@
 <?php get_header(); ?>
 
 <?php pageBanner(array(
-  'title' => 'Книги',
-  'desc' => '<p>Тематические книги по теме Возобновляемая Энергетика</p>',
+  'title' => __('Книги', 'gisre-theme'),
+  'desc' => '<p>' . __('Тематические книги по теме Возобновляемая Энергетика', 'gisre-theme') . '</p>',
   'image' => 'assets/images/bookswallpaper.jpg'
 )); ?>
+
 
 
 <section class="cards">
@@ -13,7 +14,7 @@
         <?php     
           while(have_posts()) {
             the_post(); 
-            get_template_part('template-parts/card');
+            get_template_part('template-parts/bookcard');
             }  
         ?> 
       </div>

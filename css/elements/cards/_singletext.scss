@@ -7,8 +7,21 @@
 
     &__desc {
 
+        padding-top: 50px;
+        padding-bottom: 50px;
+
         a {
             color: $neutral;
+        }
+    }
+
+    &__goback {
+
+        a {
+            color: $neutral;
+            display: block;
+            padding: 10px;
+            background-color: $light;
         }
     }
 }

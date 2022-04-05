@@ -12,6 +12,10 @@
         color: $neutral;
     }
 
+    &__sitename {
+        padding: 0;
+    }
+
     &__image {
         max-width: 45px;
         margin-right: 15px;
@@ -34,6 +38,11 @@
 
 @media screen and (max-width: 1040px) {
     .header {
+
+
+        &__logo {
+            margin: 10px;
+        }
 
         &__container {
             height: 120px;

@@ -8,7 +8,7 @@
             <div class="hero__box">
                 <div class="hero__text">
                     <h1 class="hero__slogan">
-                        ГИС Возобновляемые Источники Энергии России
+                    <?php echo __('ГИС Возобновляемые Источники Энергии России', 'gisre-theme'); ?> 
                     </h1>
                 </div>
             </div>
@@ -16,7 +16,7 @@
   </section>
   <section class="reasons">
         <div class="container">
-            <h2 class="reasons__header">Типы источников возобновляемой энергии</h2>
+            <h2 class="reasons__header"><?php echo __('Типы источников возобновляемой энергии', 'gisre-theme'); ?></h2>
             <div class="reasons__items">
 
               <?php 
@@ -49,8 +49,10 @@
                     <img src="<?php echo get_theme_file_uri('/assets/images/background.jpg') ?>" alt="">
                 </div>
                 <div class="about__text">
-                    <h2 class="about__header">О проекте</h2>
-                    <p>Проект «Геоинформационная система «Возобновляемые источники энергии России» (ГИС ВИЭР) выполняется совместно географическим факультетом МГУ (лаборатория возобновляемых источников энергии (НИЛ ВИЭ)) и Объединенным институтом высоких температур РАН (лаборатория возобновляемых источников энергии). Осуществление проекта было начато в рамках выполнения Государственного контракта № 14.740.11.0096 по Федеральной целевой программе «Научные и научно-педагогические кадры инновационной России» на 2009-2013 годы.                        
+                    <h2 class="about__header"><?php echo __('О проекте', 'gisre-theme'); ?></h2>
+                    <p>
+                    <?php echo __('Проект «Геоинформационная система «Возобновляемые источники энергии России» (ГИС ВИЭР) выполняется совместно географическим факультетом МГУ (лаборатория возобновляемых источников энергии (НИЛ ВИЭ)) и Объединенным институтом высоких температур РАН (лаборатория возобновляемых источников энергии). Осуществление проекта было начато в рамках выполнения Государственного контракта № 14.740.11.0096 по Федеральной целевой программе «Научные и научно-педагогические кадры инновационной России» на 2009-2013 годы.', 'gisre-theme'); ?>    
+                    
                     </p>
                 </div>
             </div>
@@ -62,7 +64,7 @@
     <section class="news">
         <div class="container">
             <h3 class="news__header">
-                Новости ВИЭ
+            <?php echo __('Новости ВИЭ', 'gisre-theme'); ?>
             </h3>
 
             <div class="news__items">
@@ -130,19 +132,19 @@
                 <div class="partners__item">
                     <img src="<?php echo get_theme_file_uri('/assets/images/logo02.png') ?>" alt="" class="partners__image">
                     <p class="partners__text">
-                        Географический факлуьтет МГУ
+                    <?php echo __('Географический факультет МГУ', 'gisre-theme'); ?>
                     </p>
                 </div>
                 <div class="partners__item partners__item_dark">
                     <img src="<?php echo get_theme_file_uri('/assets/images/logo01.png') ?>" alt="" class="partners__image">
                     <p class="partners__text">
-                        ГИС ВИЭ
+                    <?php echo __('ГИС ВИЭ', 'gisre-theme'); ?>
                     </p>
                 </div>
                 <div class="partners__item">
                     <img src="<?php echo get_theme_file_uri('/assets/images/logo03.png') ?>" alt="" class="partners__image">
                     <p class="partners__text">
-                        ОИВТ РАН
+                    <?php echo __('ОИВТ РАН', 'gisre-theme'); ?>
                     </p>
                 </div>
             </div>

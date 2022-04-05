@@ -36,10 +36,13 @@ add_action('wp_enqueue_scripts', 'gisre_files');
 function gisre_features() {
     register_nav_menu('headerMenuLocation', 'Header Menu Location');
     register_nav_menu('footerMenuLocation', 'Footer Menu Location');
+    register_nav_menu('footerMenuLocation2', 'Footer Menu Location 2');
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     add_image_size('objectsOnMap', 600, 400, true);
-    add_image_size('booksCover', 200, 250, true);
+    add_image_size('booksCover', 220, 275, true);
+    add_image_size('booksSmallCover', 120, 150, true);
+    load_theme_textdomain('gisre-theme', get_template_directory() . '/languages');
 }
 
 
@@ -85,4 +88,20 @@ function pageBanner($args = NULL) {
         </section>
     <?php
 }
+
+// add Widgets 
+
+function gisre_widgets_init() {
+    register_sidebar( array(
+        'name' => esc_html__('Polylangplace', 'gisretranslate'),
+        'id' => 'language_switcher',
+        'description' => esc_html__('Add widgets here', 'gisretranslate'),
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ) );
+}
+
+add_action('widgets_init', 'gisre_widgets_init');
 

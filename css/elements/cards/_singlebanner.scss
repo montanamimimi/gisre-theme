@@ -20,6 +20,22 @@
         color: white;
     }
 
+    &__book {
+        display: flex;
+    }
+
+    &__desc {
+        padding-left: 20px;
+
+        p {
+            padding-bottom: 0;
+        }
+    }
+
+    &__img {
+        min-width: 120px;
+    }
+
     
 
 }

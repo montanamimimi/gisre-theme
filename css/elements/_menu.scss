@@ -1,85 +1,165 @@
-.menu-mainheader-container .nav{
+.header__container {
+
     display: flex;
-}
+    justify-content: space-between;
 
-#menu-mainheader {
-  &__list {
-      display: flex !important;
-      list-style: none;
-  }
-
-  &__item, .menu-item {
-
-    color: $primary;
-    list-style: none;
-    font-size: 18px;
-    &_active {
-        font-weight: 600;
+    .header__menu {
+        width: 100%;    
         padding-left: 20px;
-        padding-right: 20px;
-    }
-    a {
-        padding: 8px    20px;
-        color: $primary;
-        &:hover {
-            transition: 0.4s;
-            color: white;
-            background-color: $primary;            
-        }
     }
 
-  }
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+    z-index: 100;
 
-
-@media screen and (max-width: 1040px) {
-    .menu {
+    .menu-mainheader-container, .menu-mainheaderen-container {        
         
-        &__list {
-            flex-wrap: wrap;
+        ul {
+            display: flex;
+            padding: 0;
+            background-color: #fff;
+            width: 100%;
+            z-index: 100;
         }
-
-        &__item {
-            padding-bottom: 20px;
-        }
-    } 
-}
-
-
-@media screen and (max-width: 640px) {
-    .menu {
-        
-        &__list {
-
-            li:not(:first-child) {
+    
+        li {
+            list-style: none;    
+            position: relative;
+            
+            ul.sub-menu {
                 display: none;
             }
-        }
-
-        
-        &__item {
-            padding-bottom: 0px;
-        }
-
-    } 
-}
-
-
-.current-menu-item a, .current-page-ancestor a {
-    color: $primarydark;
-}
-
-.menu-footer-menu-container .menu {
     
-    li {
-        list-style: none;
-        
-        a {
-            color: $neutrallight;
-            
-            &:hover {
-                color: white;
+            a {
+                text-decoration: none;
+                padding: 1rem;
+                display: block;
+                color: $primary;
             }
+
+            &:hover {
+                background-color: $primary;
+                
+                a {
+                    color: white;
+                }
+
+                ul.sub-menu {
+                    display: block;
+                    position: absolute;
+                    top: 55px;
+                    left: 0;
+                    background-color: $primary;
+                    min-width: 200px;
+
+                    li:hover {
+                        background-color: white;
+                        border: 1px solid $primary;
+                        a {
+                            color: $primary;
+                        }                    
+                    }
+                }
+            }
+        }
+    }
+
+    .toggle-button {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+
+        .bar {
+            height: 3px;
+            width: 100%;
+            background-color: rgb(85, 85, 85);
+        }
+    }
+
+}
+
+.footer__first-menu, .footer__second-menu {
+
+    ul {
+        list-style: none;
+
+        li {
+
+            a {
+                color: $light;
+
+                &:hover {
+                    color: $secondary;
+                }
+            }
+
+        }
+    }
+
+}
+
+
+@media (max-width:  1040px) {
+
+    .header {
+        .container {
+            padding: 0;
+        }
+
+    
+    }
+    .header__container {
+
+        .header__menu {
+            padding: 20px 0px;
+        }
+
+        .header__search {
+            display: none;
+        }
+
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;    
+
+        .menu-mainheader-container, .menu-mainheaderen-container {
+            display: none;
+            width: 100%;
+
+            ul {
+                flex-direction: column;
+                flex-wrap: nowrap;
+                width: 100%;
+                padding: 0;
+            }
+
+            li {
+                border-bottom: 1px solid $light;
+            }
+        }
+
+        .toggle-button {
+            display: flex;
+        }
+
+        .menu-mainheader-container.active, .menu-mainheaderen-container.active {
+            display: flex;
+        }
+
+    }
+
+    .header__menu.active {
+
+        .menu-mainheader-container, .menu-mainheaderen-container {
+            display: flex;
         }
     }
 }

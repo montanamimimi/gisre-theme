@@ -13,6 +13,12 @@
         border: 1px solid $neutrallight;
         margin: 6px;
 
+        &-book-info {
+            font-size: 0.8rem;
+            border-bottom: 1px solid rgb(202, 202, 202);
+            margin-bottom: 10px;
+        }
+
         &:hover {
             color: $neutral;
         }
