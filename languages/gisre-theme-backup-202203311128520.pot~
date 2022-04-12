@@ -1,0 +1,52 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Gisre\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-31 11:25+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.1; wp-5.9.2\n"
+"X-Domain: gisre-theme"
+
+#. Name of the theme
+msgid "Gisre"
+msgstr ""
+
+#. Author of the theme
+msgid "Lena Montana"
+msgstr ""
+
+#: header.php:15
+msgid "ГИC&nbsp;ВИЭ"
+msgstr ""
+
+#: front-page.php:11
+msgid "ГИС Возобновляемые Источники Энергии России"
+msgstr ""
+
+#: front-page.php:52
+msgid "О проекте"
+msgstr ""
+
+#: front-page.php:54
+msgid ""
+"Проект «Геоинформационная система «Возобновляемые источники энергии России» "
+"(ГИС ВИЭР) выполняется совместно географическим факультетом МГУ (лаборатория "
+"возобновляемых источников энергии (НИЛ ВИЭ)) и Объединенным институтом "
+"высоких температур РАН (лаборатория возобновляемых источников энергии). "
+"Осуществление проекта было начато в рамках выполнения Государственного "
+"контракта № 14.740.11.0096 по Федеральной целевой программе «Научные и "
+"научно-педагогические кадры инновационной России» на 2009-2013 годы."
+msgstr ""
+
+#: front-page.php:19
+msgid "Типы источников возобновляемой энергии"
+msgstr ""
