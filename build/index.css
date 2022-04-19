@@ -119,7 +119,7 @@ p {
   padding-right: 14px;
 }
 
-.separator {
+.separator, .wp-block-separator {
   width: 100%;
   height: 1px;
   background-color: #cecfd3;
@@ -804,6 +804,9 @@ body.admin-bar .search-overlay {
 .single-text__content {
   max-width: 80%;
 }
+.single-text__content ul, .single-text__content ol {
+  padding-bottom: 20px;
+}
 .single-text__desc {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -816,6 +819,31 @@ body.admin-bar .search-overlay {
   display: block;
   padding: 10px;
   background-color: #e2e5f1;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #3D445C;
+  text-align: center;
+  line-height: 1rem;
+}
+
+.atlas__content {
+  display: flex;
+  padding: 20px;
+}
+.atlas__content h4 {
+  padding-bottom: 20px;
+}
+.atlas__content ul {
+  list-style: none;
+}
+.atlas__content ul li a {
+  color: #a54f1a;
+  line-height: 30px;
+}
+.atlas__content ul li a:hover {
+  color: #27292e;
 }
 
 /*# sourceMappingURL=index.css.map*/

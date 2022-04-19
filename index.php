@@ -22,11 +22,16 @@
   <section class="cards">
     <div class="container">
       <div class="cards__items">
-        <?php     
+        <?php   
+        
+          query_posts('cat=28');
+
           while(have_posts()) {
             the_post(); 
             get_template_part('template-parts/card');
             }  
+
+          wp_reset_postdata();
         ?> 
       </div>
       <?php echo paginate_links(); ?>

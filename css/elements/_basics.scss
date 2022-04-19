@@ -54,11 +54,15 @@ p {
     padding-right: 14px;
 }
 
-.separator {
+.separator, .wp-block-separator {
     width: 100%;
     height: 1px;
     background-color: $neutrallight;
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+
+
+
 

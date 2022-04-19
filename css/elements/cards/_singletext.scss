@@ -3,6 +3,10 @@
 
     &__content {
         max-width: 80%;
+
+        ul, ol {
+            padding-bottom: 20px;
+        }
     }
 
     &__desc {
@@ -24,4 +28,11 @@
             background-color: $light;
         }
     }
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: $neutral;
+    text-align: center;
+    line-height: 1rem;
 }
