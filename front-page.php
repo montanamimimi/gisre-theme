@@ -75,17 +75,34 @@
 
               $myLastPosts = new WP_Query(array(
                 'posts_per_page' => 3,
+                'cat' => 28
               ));
 
               while($myLastPosts->have_posts()) {
                 $myLastPosts->the_post(); ?>
 
+                <h1> <?php 
+
+                $isHaveImage = get_the_post_thumbnail_url();
+
+
+                // if ($a) {
+                  
+                // print_r($a);
+                // } else {
+                  
+                // print_r('AAAAAAAAAAAAAAA');
+                // }
+                
+
+                
+                ?></h1>
+
                 <a href="<?php the_permalink(); ?>#111" class="news__item" style="background-image:url('<?php 
-                      $postImage = get_the_post_thumbnail_url();
-                      if ($postImage) {
-                        echo $postImage;
+                      if ($isHaveImage) {
+                        the_post_thumbnail_url('newsFrontpage');
                       } else {
-                        echo get_theme_file_uri('assets/images/news_20220112-300.jpg');
+                        echo get_theme_file_uri('assets/images/news_basic.jpg');
                       }
                     ?>');">
                     <div class="news__item-card">
@@ -94,7 +111,7 @@
                                    <?php the_title(); ?> 
                             </h4>
                             <span class="news__item-date">
-                                12 ноября 2021
+                            <?php the_time('j.n.Y'); ?>
                             </span>
                             <p class="news__item-text">
                             <?php

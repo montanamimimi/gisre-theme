@@ -39,9 +39,10 @@ function gisre_features() {
     register_nav_menu('footerMenuLocation2', 'Footer Menu Location 2');
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
-    add_image_size('objectsOnMap', 600, 400, true);
+//    add_image_size('objectsOnMap', 600, 400, true);
     add_image_size('booksCover', 220, 275, true);
     add_image_size('booksSmallCover', 120, 150, true);
+    add_image_size('newsFrontpage', 455, 375, true);
     load_theme_textdomain('gisre-theme', get_template_directory() . '/languages');
 }
 
@@ -105,3 +106,23 @@ function gisre_widgets_init() {
 
 add_action('widgets_init', 'gisre_widgets_init');
 
+function prepare_custom_queries($query) {
+
+    if ($query->is_main_query() && ! is_admin()) {
+
+        // Links section
+
+        if ($query->is_post_type_archive('link')) {
+            $query->set('posts_per_page' , -1);
+        }
+
+        // News section
+
+        if ($query->is_home() ) {
+            $query->set('cat' , 28);
+        }
+
+    }
+}
+
+add_action('pre_get_posts', 'prepare_custom_queries');

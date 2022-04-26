@@ -19,9 +19,7 @@ $nextPostCategory = get_the_category($nextPost->ID);
   <div class="container">
     <div class="single-banner__content">
      <h1><?php the_title(); ?></h1>
-     <?php  if ($isnews) { ?>
-      <p><?php the_time('n.j.Y'); ?></p>
-     <?php } ?>
+
      
      <p class="single-banner__button">
        <?php echo get_the_category_list( ', ')  ?>
@@ -34,13 +32,23 @@ $nextPostCategory = get_the_category($nextPost->ID);
   <div class="container">
       <div class="single-text__desc">
 
-        <p class="single-banner__button">
-        <?php echo get_the_category_list( ', ')  ?>
-        </p>
+      <?php  if ($isnews) { ?>
+      <p>Дата публикации: <?php the_time('n.j.Y'); ?></p>
+     <?php } ?>
         
         
         <div class="separator"></div>
+        <?php 
+        $postImage = get_the_post_thumbnail_url();
+          if ($postImage) { ?>
+            <div class="single-text__image">
+              <img src="<?php echo $postImage ?>" alt="<?php echo esc_html ( get_the_title() ) ?>">
+            </div>        
+          <?php } ?>
+
         <div class="single-text__content">
+
+
           <?php the_content(); ?>
         </div>
         <div class="single-text__adding">
@@ -65,7 +73,18 @@ $nextPostCategory = get_the_category($nextPost->ID);
         </div>
       </div>
 
-      <div class="single-links">
+      <?php 
+        if (get_field('source')) { ?>
+
+          Источник: <a href="<?php echo get_field('sourcelink'); ?>" target="_blank"><?php echo get_field('source'); ?></a>
+        <?php }
+      ?>
+
+      <div class="single-link">
+
+      </div>
+
+      <div class="single-paginate">
         <?php 
                    
           if (($category[0]->term_id == $prevPostCategory[0]->term_id) && $prevPost) { ?>
@@ -76,9 +95,7 @@ $nextPostCategory = get_the_category($nextPost->ID);
           if (($category[0]->term_id == $nextPostCategory[0]->term_id) && $nextPost) { ?>
             <a href="<?php echo get_permalink($nextPost->ID); ?>">Следующая запись</a>
 
-           <?php }  ?>
-
-          
+           <?php }  ?>          
         
       </div>
   </div>

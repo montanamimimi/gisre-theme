@@ -28,6 +28,7 @@
         li {
             list-style: none;    
             position: relative;
+            border: 1px solid white;
             
             ul.sub-menu {
                 display: none;
@@ -42,6 +43,7 @@
 
             &:hover {
                 background-color: $primary;
+                border: 1px solid $primarydark2;
                 
                 a {
                     color: white;
@@ -50,15 +52,18 @@
                 ul.sub-menu {
                     display: block;
                     position: absolute;
-                    top: 42px;                    
+                    top: 45px;                    
                     left: -1px;
                     background-color: $primary;
                     min-width: 200px;
-                    border-left: 1px solid white;
-                    border-bottom: 1px solid white;
-                    border-right: 1px solid white;
+                    border-left: 1px solid $primarydark2;
+                    border-bottom: 1px solid $primarydark2;
+                    border-right: 1px solid $primarydark2;
+                    box-shadow: 0px 10px 10px 4px rgba(0, 0, 0, 0.2);
 
                     li {
+
+                        border: 1px solid $primary;
 
                         &:hover {
                             background-color: white;
@@ -123,10 +128,11 @@
 
     
     }
+
     .header__container {
 
         .header__menu {
-            padding: 20px 0px;
+            padding: 0px 0px;
         }
 
         .header__search {
@@ -140,6 +146,7 @@
         .menu-mainheader-container, .menu-mainheaderen-container {
             display: none;
             width: 100%;
+            border-top: 1px solid $light;
 
             ul {
                 flex-direction: column;
@@ -150,6 +157,43 @@
 
             li {
                 border-bottom: 1px solid $light;
+
+                &:hover {
+
+                    ul.sub-menu {
+                        display: none;
+                    }
+                }
+            }
+
+            li.active {           
+                background-color: $primary;
+                
+                a {
+                    color: white;
+                }
+                
+                ul.sub-menu {
+                    display: block;
+                    // position: absolute;
+                    // top: 45px;                    
+                    background-color: $primary;
+
+                    li {
+                        a {
+                            color: white;
+                        }
+
+                        &:hover {
+                            background-color: white;
+                            a {
+                                color: $primary;
+                            }                    
+                        }
+
+                    }
+                
+                }
             }
         }
 
@@ -169,4 +213,7 @@
             display: flex;
         }
     }
+
+
+
 }

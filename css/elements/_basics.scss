@@ -36,6 +36,10 @@ h3 {
     color: $neutral;  
 }
 
+h1, h2, h3 {
+    padding-left: 0;
+  }
+
 a {
     text-decoration: none;
 }
@@ -60,6 +64,10 @@ p {
     background-color: $neutrallight;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.mainbanner {
+    background-size: cover;
 }
 
 

@@ -28,6 +28,13 @@
             background-color: $light;
         }
     }
+
+    &__image {
+        img {
+            max-width: 800px;
+            padding-bottom: 20px;
+        }
+    }
 }
 
 figcaption {

@@ -11,20 +11,19 @@
     <div class="container">
 
       <ul class="catlist__items">
-            <?php $catlist = wp_list_categories(array(
-                    'title_li' => ''
-              ));        
+            <?php 
+            // $catlist = wp_list_categories(array(
+            //         'title_li' => ''
+            //   ));        
             ?>
       </ul>
     </div>
   </section>
 
-  <section class="cards">
+  <section class="cards news__cards">
     <div class="container">
       <div class="cards__items">
-        <?php   
-        
-          query_posts('cat=28');
+        <?php         
 
           while(have_posts()) {
             the_post(); 
@@ -34,7 +33,10 @@
           wp_reset_postdata();
         ?> 
       </div>
-      <?php echo paginate_links(); ?>
+      <div class="pagination__items">
+        <?php echo paginate_links(); ?>
+      </div>
+
     </div>
   </section>
 

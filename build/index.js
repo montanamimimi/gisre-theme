@@ -2294,7 +2294,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_Search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/Search */ "./src/modules/Search.js");
 
 
-const search = new _modules_Search__WEBPACK_IMPORTED_MODULE_1__["default"]();
+const search = new _modules_Search__WEBPACK_IMPORTED_MODULE_1__["default"](); // Menu adaptive
+
+const mommyButtons = document.querySelectorAll('.menu-item-has-children');
+mommyButtons.forEach(button => {
+  button.addEventListener('click', e => {
+    button.classList.toggle('active');
+  });
+});
 const toggleButton = document.querySelector('.toggle-button');
 const menu = document.querySelector('.header__menu');
 toggleButton.addEventListener('click', e => {
