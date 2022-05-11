@@ -33,14 +33,15 @@ $nextPostCategory = get_the_category($nextPost->ID);
       <div class="single-text__desc">
 
       <?php  if ($isnews) { ?>
-      <p>Дата публикации: <?php the_time('n.j.Y'); ?></p>
+      <p>Дата публикации: <?php the_time('j.n.Y'); ?></p>
      <?php } ?>
         
         
         <div class="separator"></div>
+        
         <?php 
         $postImage = get_the_post_thumbnail_url();
-          if ($postImage) { ?>
+          if ($postImage && $isnews) { ?>
             <div class="single-text__image">
               <img src="<?php echo $postImage ?>" alt="<?php echo esc_html ( get_the_title() ) ?>">
             </div>        
@@ -76,7 +77,7 @@ $nextPostCategory = get_the_category($nextPost->ID);
       <?php 
         if (get_field('source')) { ?>
 
-          Источник: <a href="<?php echo get_field('sourcelink'); ?>" target="_blank"><?php echo get_field('source'); ?></a>
+          Источник: <a href="<?php echo get_field('sourcelink'); ?>" target="_blank" rel="nofollow"><?php echo get_field('source'); ?></a>
         <?php }
       ?>
 
@@ -85,18 +86,16 @@ $nextPostCategory = get_the_category($nextPost->ID);
       </div>
 
       <div class="single-paginate">
-        <?php 
-                   
-          if (($category[0]->term_id == $prevPostCategory[0]->term_id) && $prevPost) { ?>
-           <a href="<?php echo get_permalink($prevPost->ID); ?>">Предыдущая запись</a>
-
-           <?php } 
-
-          if (($category[0]->term_id == $nextPostCategory[0]->term_id) && $nextPost) { ?>
-            <a href="<?php echo get_permalink($nextPost->ID); ?>">Следующая запись</a>
-
-           <?php }  ?>          
+        <div class="single-paginate__item">
+          <?php previous_post_link( '%link', 'Предыдущий пост', true ); ?>
+        </div>
+        <div class="single-paginate__item">
+          <?php next_post_link( '%link', 'Следующий пост', true ); ?>
+        </div>
+             
         
+      </div>
+      <div class="div"> 
       </div>
   </div>
 </section>

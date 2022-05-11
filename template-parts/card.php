@@ -5,7 +5,7 @@
               <h3 class="cards__item-header">
                 <?php the_title(); ?> 
               </h3>
-              <span class="cards__item-date"><?php the_time('n.j.Y'); ?></span>
+              <span class="cards__item-date"><?php the_time('j.n.Y'); ?></span>
               <p class="cards__item-text">
               <?php 
                 if (has_excerpt()) {
@@ -17,9 +17,10 @@
               </p>
               <div class="cards__button">Читать далее</div>
             </div>
-          
-            <div class="cards__item-pic">
-              <img src="<?php the_post_thumbnail_url('booksCover'); ?>" alt="">
+                
+            <div class="cards__item-pic 
+            <?php if (get_the_post_thumbnail_url()) { echo ' cards__item-has-image';} ?>" 
+              style="background-image: url(<?php  the_post_thumbnail_url('newsFrontpage'); ?>);">            
             </div>
           </div>
         </a>        

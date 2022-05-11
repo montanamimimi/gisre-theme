@@ -6,7 +6,7 @@
     <div class="single-banner__content">
       <div class="single-banner__book">
        <div class="single-banner__img">
-         <img src="<?php the_post_thumbnail_url('booksSmallCover'); ?>" alt="">
+         <img src="<?php the_post_thumbnail_url(); ?>" alt="">
        </div>
        <div class="single-banner__desc">
         <h1><?php the_title(); ?></h1>

@@ -135,6 +135,12 @@ p {
   background-size: cover;
 }
 
+/* Fight WP styles */
+.has-large-font-size {
+  font-size: 1.5rem !important;
+  padding-top: 10px;
+}
+
 .header__container {
   display: flex;
   justify-content: space-between;
@@ -782,6 +788,28 @@ body.admin-bar .search-overlay {
   border: 1px solid #a54f1a;
 }
 
+.single-paginate {
+  display: flex;
+  padding-top: 20px;
+}
+.single-paginate__item {
+  display: block;
+  margin-right: 20px;
+}
+.single-paginate__item a {
+  display: inline-block;
+  padding: 10px;
+  transition: 0.3s;
+  color: #a54f1a;
+  border: 1px solid #e2e5f1;
+}
+.single-paginate__item a:hover {
+  color: white;
+  transition: 0.3s;
+  background-color: #F9995D;
+  border: 1px solid #a54f1a;
+}
+
 .cards {
   padding-top: 20px;
 }
@@ -803,7 +831,11 @@ body.admin-bar .search-overlay {
   margin-bottom: 10px;
 }
 .cards__item:hover {
-  color: #3D445C;
+  color: black;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.cards__item:hover h3, .cards__item:hover .cards__button {
+  color: #F9995D;
 }
 .cards__item-container {
   display: flex;
@@ -814,12 +846,32 @@ body.admin-bar .search-overlay {
   width: 70%;
 }
 .cards__item-pic {
-  max-width: 30%;
-}
-.cards__item-pic img {
-  height: 100%;
+  width: 30%;
+  background-size: cover;
 }
 
+@media (max-width: 1040px) {
+  .cards__item-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .cards__item-desc {
+    width: 100%;
+  }
+  .cards__item-pic {
+    width: 100%;
+  }
+  .cards__item-has-image {
+    height: 100px;
+  }
+}
+@media (max-width: 640px) {
+  .cards__item {
+    width: 100%;
+  }
+}
 .single-banner {
   background-color: #F9995D;
   min-height: 150px;
@@ -848,7 +900,7 @@ body.admin-bar .search-overlay {
   padding-bottom: 0;
 }
 .single-banner__img {
-  min-width: 120px;
+  max-width: 120px;
 }
 
 .mainbanner {
@@ -860,6 +912,32 @@ body.admin-bar .search-overlay {
   font-size: 20px;
 }
 
+@media (max-width: 1040px) {
+  .single-banner {
+    padding: 20px;
+  }
+  .single-banner h1 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  .single-banner__content {
+    max-width: 90%;
+    color: white;
+  }
+}
+@media (max-width: 640px) {
+  .single-banner {
+    padding: 10px;
+  }
+  .single-banner__content {
+    max-width: 100%;
+    color: white;
+  }
+  .single-banner h1 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
 .single-text {
   padding: 30px;
 }
@@ -883,7 +961,7 @@ body.admin-bar .search-overlay {
   background-color: #e2e5f1;
 }
 .single-text__image img {
-  max-width: 800px;
+  max-width: 80%;
   padding-bottom: 20px;
 }
 
@@ -894,6 +972,23 @@ figcaption {
   line-height: 1rem;
 }
 
+@media (max-width: 1040px) {
+  .single-text {
+    padding: 20px;
+  }
+}
+@media (max-width: 640px) {
+  .single-text {
+    padding: 10px;
+  }
+  .single-text__content {
+    max-width: 100%;
+  }
+  .single-text__image img {
+    max-width: 100%;
+    padding-bottom: 20px;
+  }
+}
 .atlas__content {
   display: flex;
   padding: 20px;

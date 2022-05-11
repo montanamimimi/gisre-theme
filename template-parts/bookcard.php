@@ -19,8 +19,7 @@
               <div class="cards__button"><?php echo __('Подробная информация', 'gisre-theme'); ?></div>
             </div>
           
-            <div class="cards__item-pic">
-              <img src="<?php the_post_thumbnail_url('booksCover'); ?>" alt="">
+            <div class="cards__item-pic" style="background-image: url(<?php  the_post_thumbnail_url(); ?>);">            
             </div>
           </div>
         </a>        

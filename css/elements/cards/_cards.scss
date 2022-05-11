@@ -1,5 +1,6 @@
 .cards {
     padding-top: 20px;
+
     &__items {
         display: flex;
         flex-wrap: wrap;
@@ -20,7 +21,15 @@
         }
 
         &:hover {
-            color: $neutral;
+         
+            color: black;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+            h3, .cards__button {
+                color: $primary;
+            }
+
+
         }
 
         &-container {
@@ -34,11 +43,47 @@
         }
 
         &-pic {
-            max-width: 30%;
+            width: 30%;
+            background-size: cover;
+        }
+    }
+}
 
-            img {
-                height: 100%;
+@media (max-width: 1040px) {
+    .cards {
+
+        &__item {
+            &-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
             }
+
+            &-desc {
+                width: 100%;
+            }
+
+            &-pic {
+                width: 100%;                
+            }
+
+            &-has-image {
+                height: 100px;
+            }
+        }
+
+
+
+    }
+}
+
+@media (max-width: 640px) {
+    .cards {
+        &__item {
+
+            width: 100%;
+
         }
     }
 }

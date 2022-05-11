@@ -24,3 +24,30 @@
     }
 
 }
+
+.single-paginate {
+    display: flex;
+    padding-top: 20px;
+
+    &__item {
+
+        display: block;
+
+        margin-right: 20px;
+        
+        a {
+            display: inline-block;
+            padding: 10px;
+            transition: 0.3s;
+            color: $primarydark;
+            border: 1px solid $light;
+
+            &:hover {
+                color: white;
+                transition: 0.3s;
+                background-color: $primary;
+                border: 1px solid $primarydark;
+            }
+        }
+    }
+}

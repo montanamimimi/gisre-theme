@@ -31,7 +31,7 @@
 
     &__image {
         img {
-            max-width: 800px;
+            max-width: 80%;
             padding-bottom: 20px;
         }
     }
@@ -42,4 +42,28 @@ figcaption {
     color: $neutral;
     text-align: center;
     line-height: 1rem;
+}
+
+@media (max-width: 1040px) {
+    .single-text {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .single-text {
+        padding: 10px;
+    
+        &__content {
+            max-width: 100%;
+        }
+
+    
+        &__image {
+            img {
+                max-width: 100%;
+                padding-bottom: 20px;
+            }
+        }
+    }    
 }

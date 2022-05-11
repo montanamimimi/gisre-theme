@@ -40,8 +40,8 @@ function gisre_features() {
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
 //    add_image_size('objectsOnMap', 600, 400, true);
-    add_image_size('booksCover', 220, 275, true);
-    add_image_size('booksSmallCover', 120, 150, true);
+//    add_image_size('booksCover', 220, 275, true);
+//    add_image_size('booksSmallCover', 120, 150, true);
     add_image_size('newsFrontpage', 455, 375, true);
     load_theme_textdomain('gisre-theme', get_template_directory() . '/languages');
 }
@@ -80,6 +80,18 @@ function pageBanner($args = NULL) {
 
     ?>
         <section class="mainbanner" style="background-image: url(<?php echo get_theme_file_uri($args['image']); ?>)">
+            <div class="container">
+                <h1>
+                    <?php echo $args['title'] ?>
+                </h1>
+                <div class="mainbanner__desc"><?php echo $args['desc'] ?></div>
+            </div>
+        </section>
+    <?php
+}
+
+function etypeBanner($args = NULL) {    ?>
+        <section class="mainbanner" style="background-image: url(<?php echo $args['image']; ?>)">
             <div class="container">
                 <h1>
                     <?php echo $args['title'] ?>

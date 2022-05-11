@@ -16,7 +16,11 @@
             }  
         ?> 
       </div>
-      <?php echo paginate_links(); ?>
+
+      <div class="pagination__items">
+        <?php echo paginate_links(); ?>
+      </div>
+
     </div>
 </section>
 
