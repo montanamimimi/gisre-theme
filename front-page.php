@@ -16,7 +16,7 @@
   </section>
   <section class="reasons">
         <div class="container">
-            <h2 class="reasons__header"><?php echo __('Типы источников возобновляемой энергии', 'gisre-theme'); ?></h2>
+            <h2 class="reasons__header"><?php echo __('Отрасли возобновляемой энергетики', 'gisre-theme'); ?></h2>
             <div class="reasons__items">
 
               <?php 

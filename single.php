@@ -2,7 +2,7 @@
 
 
 $category = get_the_category();  
-if ($category[0]->term_id == 28) {
+if (($category[0]->term_id == 28) OR ($category[0]->term_id == 54)) {
   $isnews = true;
 }
 
@@ -33,7 +33,7 @@ $nextPostCategory = get_the_category($nextPost->ID);
       <div class="single-text__desc">
 
       <?php  if ($isnews) { ?>
-      <p>Дата публикации: <?php the_time('j.n.Y'); ?></p>
+      <p><?php echo __('Дата публикации', 'gisre-theme'); ?>: <?php the_time('j.n.Y'); ?></p>
      <?php } ?>
         
         
@@ -77,7 +77,7 @@ $nextPostCategory = get_the_category($nextPost->ID);
       <?php 
         if (get_field('source')) { ?>
 
-          Источник: <a href="<?php echo get_field('sourcelink'); ?>" target="_blank" rel="nofollow"><?php echo get_field('source'); ?></a>
+      <?php echo __('Источник', 'gisre-theme'); ?>: <a href="<?php echo get_field('sourcelink'); ?>" target="_blank" rel="nofollow"><?php echo get_field('source'); ?></a>
         <?php }
       ?>
 
@@ -87,10 +87,10 @@ $nextPostCategory = get_the_category($nextPost->ID);
 
       <div class="single-paginate">
         <div class="single-paginate__item">
-          <?php previous_post_link( '%link', 'Предыдущий пост', true ); ?>
+          <?php previous_post_link( '%link', __('Предыдущий пост', 'gisre-theme'), true ); ?>
         </div>
         <div class="single-paginate__item">
-          <?php next_post_link( '%link', 'Следующий пост', true ); ?>
+          <?php next_post_link( '%link', __('Следующий пост', 'gisre-theme'), true ); ?>
         </div>
              
         

@@ -15,7 +15,7 @@
                 }
               ?>
               </p>
-              <div class="cards__button">Читать далее</div>
+              <div class="cards__button"><?php echo __('Читать далее', 'gisre-theme'); ?></div>
             </div>
                 
             <div class="cards__item-pic 

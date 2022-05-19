@@ -43,7 +43,8 @@
 
       </div>
       <div class="single-text__goback">
-        <a href="<?php echo site_url('/books') ?>">Назад к списку книг</a>
+ 
+        <a href="<?php echo get_post_type_archive_link('book');  ?>"><?php echo __('Назад к списку книг', 'gisre-theme'); ?></a>
       </div>
   </div>
 </section>
