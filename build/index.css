@@ -67,6 +67,11 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* size */
 /* Colors */
+.single-text__content table td {
+  border: 1px solid #e2e5f1;
+  padding: 5px;
+}
+
 /* Delete this part after */
 .redme {
   background-color: red;
