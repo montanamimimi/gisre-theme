@@ -1,0 +1,10 @@
+.video {
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__desc {
+        padding: 20px;
+    }
+}

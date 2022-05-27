@@ -70,12 +70,47 @@ p {
     background-size: cover;
 }
 
-/* Fight WP styles */
 
-.has-large-font-size {
+// Tags 
 
-    font-size: 1.5rem !important;
-    padding-top: 10px;
+.tags {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+
+        a {
+            display: inline-block;
+            padding: 8px 16px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            background-color: $primarylight;
+            border: 1px solid $primarylight;
+            color: $primarydark;
+            font-weight: bold;
+
+            &:hover {
+                background-color: $primary;
+                color: white;
+            }
+        }
+
+    }
 }
 
 
+// For archives 
+
+.parents {
+
+    &__show {
+        margin: 20px;
+
+        a {
+            display: inline-block;
+            color: $primarydark;
+            border-bottom: 1px solid $light;
+        }
+    }
+}
