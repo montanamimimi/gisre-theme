@@ -36,9 +36,19 @@
                         <?php echo __('Исполнители', 'gisre-theme'); ?>
                         </h3>
                         <ul class="footer__nav-list">
-                            <li class="footer__nav-item"><?php echo __('Научно образовательный центр "Возобновляемые источники энергии"', 'gisre-theme'); ?></li>
-                            <li class="footer__nav-item"><?php echo __('Географический факультет МГУ имени М.В.Ломоносова', 'gisre-theme'); ?></li>
-                            <li class="footer__nav-item"><?php echo __('Объединенный институт высоких температур РАН.', 'gisre-theme'); ?></li>
+                            <li class="footer__nav-item">                                
+                                    <?php echo __('Научно образовательный центр "Возобновляемые источники энергии"', 'gisre-theme'); ?>                                 
+                            </li>                            
+                            <li class="footer__nav-item">
+                                <a href="http://geogr.msu.ru/structure/labs/vie/" target="_blank">
+                                    <?php echo __('Географический факультет МГУ имени М.В.Ломоносова', 'gisre-theme'); ?>
+                                </a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="https://jiht.ru/" target="_blank">
+                                    <?php echo __('Объединенный институт высоких температур РАН.', 'gisre-theme'); ?>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <div class="footer__section footer__contacts">

@@ -32,7 +32,7 @@
                     <div class="reasons__container">
                         <img src="<?php the_field('etype-icon') ?>" alt="" class="reasons__item-img">
                         <h3 class="reasons__item-header"><?php the_title(); ?></h3>
-                        <p class="reasons__item-desc"><?php the_excerpt(); ?></p>
+                        <?php the_excerpt(); ?>
                     </div>
                     </a>      
                   <?php } 
@@ -46,7 +46,7 @@
         <div class="container">
             <div class="about__container">
                 <div class="about__image">
-                    <img src="<?php echo get_theme_file_uri('/assets/images/background.jpg') ?>" alt="">
+                    <img src="<?php echo get_theme_file_uri('/assets/images/renewable-energy-montage.jpg') ?>" alt="">
                 </div>
                 <div class="about__text">
                     <h2 class="about__header"><?php echo __('О проекте', 'gisre-theme'); ?></h2>
@@ -146,24 +146,30 @@
     <section class="partners">
         <div class="container">
             <div class="partners__items">
-                <div class="partners__item">
-                    <img src="<?php echo get_theme_file_uri('/assets/images/logo02.png') ?>" alt="" class="partners__image">
-                    <p class="partners__text">
-                    <?php echo __('Географический факультет МГУ', 'gisre-theme'); ?>
-                    </p>
-                </div>
-                <div class="partners__item partners__item_dark">
-                    <img src="<?php echo get_theme_file_uri('/assets/images/logo01.png') ?>" alt="" class="partners__image">
-                    <p class="partners__text">
-                    <?php echo __('ГИС ВИЭ', 'gisre-theme'); ?>
-                    </p>
-                </div>
-                <div class="partners__item">
-                    <img src="<?php echo get_theme_file_uri('/assets/images/logo03.png') ?>" alt="" class="partners__image">
-                    <p class="partners__text">
-                    <?php echo __('ОИВТ РАН', 'gisre-theme'); ?>
-                    </p>
-                </div>
+                <a href="http://geogr.msu.ru/structure/labs/vie/" target="_blank" class="partners__item">
+                  <div class="partners__box">
+                      <img src="<?php echo get_theme_file_uri('/assets/images/logo02.png') ?>" alt="" class="partners__image">
+                      <p class="partners__text">
+                      <?php echo __('Географический факультет МГУ', 'gisre-theme'); ?>
+                      </p>
+                  </div>
+                </a>
+                <a href="<?php if (get_locale() == 'ru_RU') { echo site_url(); } else { echo site_url('/en'); }?>" class="partners__item partners__item-dark">
+                  <div class="partners__box">
+                      <img src="<?php echo get_theme_file_uri('/assets/images/logo01.png') ?>" alt="" class="partners__image">
+                      <p class="partners__text">
+                      <?php echo __('ГИС ВИЭ', 'gisre-theme'); ?>
+                      </p>
+                  </div>
+                </a>
+                <a href="https://jiht.ru/" target="_blank" class="partners__item">
+                  <div class="partners__box">
+                      <img src="<?php echo get_theme_file_uri('/assets/images/logo03.png') ?>" alt="" class="partners__image">
+                      <p class="partners__text">
+                      <?php echo __('ОИВТ РАН', 'gisre-theme'); ?>
+                      </p>
+                  </div>
+                </a>
             </div>
 
         </div>

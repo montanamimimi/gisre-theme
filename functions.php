@@ -4,6 +4,7 @@
 
 add_post_type_support('page', 'excerpt');
 
+require get_theme_file_path('/includes/helpers.php');
 require get_theme_file_path('/includes/search-route.php');
 
 // Add custom fields to REST API

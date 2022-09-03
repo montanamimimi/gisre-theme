@@ -1,6 +1,6 @@
 .hero {
 
-    min-height: 600px;
+    min-height: 300px;
 
     &__text {
         max-width: 600px;        
@@ -10,7 +10,7 @@
         font-style: normal;
         font-weight: 600;
         font-size: 50px;
-        padding-top: 30%;
+        padding-top: 10%;
         color: $secondarydark;
     }
 
