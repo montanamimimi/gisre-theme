@@ -1,6 +1,6 @@
 .hero {
 
-    min-height: 300px;
+    min-height: 200px;
 
     &__text {
         max-width: 600px;        
@@ -9,7 +9,7 @@
     &__slogan {
         font-style: normal;
         font-weight: 600;
-        font-size: 50px;
+        font-size: 40px;
         padding-top: 10%;
         color: $secondarydark;
     }
@@ -31,6 +31,7 @@
         &__slogan {
             font-size: 30px;
             padding-left: 30px;
+            
         }
     }
 }

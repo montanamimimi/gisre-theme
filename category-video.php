@@ -8,7 +8,7 @@
 
 <section>
   <div class="container">
-    <h2>Сортировать по категории: </h2>
+    <h3>Сортировать по категории: </h3>
     <?php 
     
     foreach (get_categories(array ('parent' => 37)) as $category) { ?>
@@ -19,7 +19,7 @@
         </div>
         <div class="video__desc">
           <div class="video__title">
-            <h3><a href="<?php echo get_category_link($category->term_id); ?>"><?php echo $category->name ?></a></h3>
+            <h4><a href="<?php echo get_category_link($category->term_id); ?>"><?php echo $category->name ?></a></h4>
           </div>
 
           <div class="video__text">
@@ -31,7 +31,7 @@
       
     <?php  } ?>
 
-    <h2>Сортировать по тематике:</h2>
+    <h3>Сортировать по тематике:</h3>
 
     <div class="tags">
 
@@ -52,7 +52,7 @@
 <section class="cards">
     <div class="container">
 
-      <h2>Смотреть все видео:</h2>
+      <h3>Смотреть все видео:</h3>
       <div class="cards__items">
         <?php     
           while(have_posts()) {

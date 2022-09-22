@@ -250,6 +250,7 @@ p {
   padding: 10px;
   display: block;
   color: #F9995D;
+  font-size: 17px;
 }
 .header__container .menu-mainheader-container li:hover, .header__container .menu-mainheaderen-container li:hover {
   background-color: #F9995D;
@@ -369,7 +370,7 @@ p {
   }
 }
 .hero {
-  min-height: 300px;
+  min-height: 200px;
 }
 .hero__text {
   max-width: 600px;
@@ -377,7 +378,7 @@ p {
 .hero__slogan {
   font-style: normal;
   font-weight: 600;
-  font-size: 50px;
+  font-size: 40px;
   padding-top: 10%;
   color: #14574f;
 }
@@ -633,7 +634,7 @@ p {
   align-items: center;
 }
 .video__desc {
-  padding: 20px;
+  padding: 10px;
 }
 
 .footer {
@@ -962,8 +963,8 @@ body.admin-bar .search-overlay {
 }
 
 .mainbanner {
-  min-height: 270px;
-  padding: 50px;
+  min-height: 150px;
+  padding: 30px;
   text-align: center;
 }
 .mainbanner__desc p {
