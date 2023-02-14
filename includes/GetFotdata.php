@@ -46,17 +46,30 @@ class GetFotdata {
 
     function prepareData($data, $type) {
 
-        $prepare = array();
+        $prepare = array();        
+        $comment = sanitize_text_field($_GET['comment']);
 
         foreach ($data as $item) {
 
-            if (!isset($prepare[$item->comment])) {
-                $prepare[$item->comment] = array();
-             //   $prepare[$item->comment]['data'] = $item->$type;
-                $prepare[$item->comment]['angle'] = $item->angle;
+            if ($comment != 'ALL') {
+                if ($item->comment == $comment) {
+                    if (!isset($prepare[$item->comment])) {
+                        $prepare[$item->comment] = array();
+                        $prepare[$item->comment]['angle'] = $item->angle;
+                    }
+        
+                    $prepare[$item->comment][$item->mm] = $item->$type;
+                }
+            } else {
+                if (!isset($prepare[$item->comment])) {
+                    $prepare[$item->comment] = array();
+                    $prepare[$item->comment]['angle'] = $item->angle;
+                }
+    
+                $prepare[$item->comment][$item->mm] = $item->$type;
             }
 
-            $prepare[$item->comment][$item->mm] = $item->$type;
+
 
         }
 
