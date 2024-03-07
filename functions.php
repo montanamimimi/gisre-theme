@@ -67,15 +67,15 @@ show_admin_bar(false);
 // Functions for content
 
 function pageBanner($args = NULL) {
-    if (!$args['title']) {
+    if (!isset($args['title'])) {
         $args['title'] = 'Welcome';      
     }
 
-    if (!$args['desc']) {
+    if (!isset($args['desc'])) {
         $args['desc'] = '';    
     }
 
-    if (!$args['image']) {
+    if (!isset($args['image'])) {
         $args['image'] = 'assets/images/background-banner.jpg';    
     }
 

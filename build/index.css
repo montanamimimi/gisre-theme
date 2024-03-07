@@ -128,7 +128,7 @@ p {
 }
 
 .container {
-  max-width: 1240px;
+  max-width: 1400px;
   margin: 0 auto;
   padding-left: 14px;
   padding-right: 14px;
@@ -172,6 +172,22 @@ p {
   display: inline-block;
   color: #a54f1a;
   border-bottom: 1px solid #e2e5f1;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.btn--light {
+  background-color: #ffe3d2;
+  border: 1px solid #F9995D;
+  color: #3D445C;
+}
+
+.btn--small {
+  padding: 4px 8px;
 }
 
 .header__container {

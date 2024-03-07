@@ -1,5 +1,6 @@
 <?php get_header(); 
 
+$isnews = false;
 
 $category = get_the_category();  
 if (($category[0]->term_id == 28) OR ($category[0]->term_id == 54)) {
