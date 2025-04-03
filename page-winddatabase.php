@@ -27,7 +27,7 @@ get_header(); ?>
             <div id="map" class="yandex-map-db"></div>
         </div>
         <div class="db-desc">
-            <p>Для отображения данных выберите коориднаты на карте или введите в форму ниже.
+            <p>Для отображения данных выберите координаты на карте или введите в форму ниже.
             </p>
 
 
@@ -60,7 +60,7 @@ get_header(); ?>
                             >Siemens Gamesa SG 3.4-132</option>
                             <option value="lager"
                             <?php if ($_GET['wtype'] == "lager") { echo 'selected="true"'; } ?>
-                            >LagerweiL100</option>
+                            >LagerweyL100</option>
                             <option value="vesta"
                             <?php if ($_GET['wtype'] == "vesta") { echo 'selected="true"'; } ?>
                             >VestasV126</option>
