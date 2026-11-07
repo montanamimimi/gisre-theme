@@ -22,8 +22,8 @@ add_action('rest_api_init', 'gisre_custop_rest');
 // Files js css
 
 function gisre_files() {
-    wp_enqueue_script('my-scripts', get_theme_file_uri('/build/index.js'), NULL, false, true);    
-    wp_enqueue_style('gisre_test_styles', get_theme_file_uri('/build/index.css'));
+    wp_enqueue_script('my-scripts', get_theme_file_uri('/build/index.js'), [], '1.0.1', true);    
+    wp_enqueue_style('gisre_test_styles', get_theme_file_uri('/build/index.css'), [], '1.0.1');
     wp_localize_script('my-scripts', 'gisreData', array(
         'root_url' => get_site_url()
     ));

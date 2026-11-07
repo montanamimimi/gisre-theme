@@ -1,44 +1,76 @@
 <?php 
 
 class GetWinddata {
-    function __construct() {
-        global $wpdb;
-        $tablename = $wpdb->prefix . 'winddb';
-        $this->parameters = array(
+
+    private $parameters = array(
             'mean_output' => 'Среднесуточная производительность',
             'std_output' => 'Стандартное отклонение',
             'median_output' => 'Медианная производительность',
             'min_output' => 'Минимальная производительность',
             'max_output' => 'Максимальная производительность'
         );
+    
+    private string $query;
+    private $arg;
+    public $data;
+
+    function __construct() {
+        global $wpdb;
+        $tablename = $wpdb->prefix . 'winddb';
+
         $this->arg = $this->getArg();               
-        $this->$query = "SELECT * FROM $tablename ";
-        $this->$query .= $this->createWhereText();
-        $this->data = $wpdb->get_results($wpdb->prepare($this->$query, $this->arg));
+        $this->query = "SELECT * FROM $tablename ";
+        $this->query .= $this->createWhereText();
+
+        if ($this->arg) {
+            $this->data = $wpdb->get_results($wpdb->prepare($this->query, $this->arg));
+        }
+        // $this->data = $wpdb->get_results($wpdb->prepare($this->query, $this->arg));
     }
 
     function getArg() {
-        $lat = round($_GET['lat']*4, 0)/4;
-        $lon = round($_GET['lon']*4, 0)/4;
-        $types = array('komai', 'sieme', 'lager', 'vesta');
-        
+
+        $lat = isset($_GET['lat']) ? round($_GET['lat']*4, 0)/4 : "";
+        $lon = isset($_GET['lon']) ? round($_GET['lon']*4, 0)/4 : "";
+
+        // if (isset($_GET['lat'])) {
+        //     $lat = round($_GET['lat']*4, 0)/4;
+        // }
+
+        if (isset($_GET['lon'])) {
+            $lon = round($_GET['lon']*4, 0)/4;
+        }       
+       
+        $types = array('komai', 'sieme', 'lager', 'vesta');        
 
         if (is_float($lat) && is_float($lon) && in_array($_GET['wtype'], $types)) {
             return array($lat, $lon, $_GET['wtype']);
-        } 
+        } else {
+            return false;
+        }
     }
 
     function createWhereText() {
+
+    
+        $lat = isset($_GET['lat']) ? round($_GET['lat']*4, 0)/4 : "";
+        $lon = isset($_GET['lon']) ? round($_GET['lon']*4, 0)/4 : "";
+
+        // if (isset($_GET['lat'])) {
+        //     $lat = round($_GET['lat']*4, 0)/4;
+        // }
+
+        // if (isset($_GET['lon'])) {
+        //     $lon = round($_GET['lon']*4, 0)/4;
+        // }       
         
-        $lat = round($_GET['lat']*4, 0)/4;
-        $lon = round($_GET['lon']*4, 0)/4;
+        // $lat = round($_GET['lat']*4, 0)/4;
+        // $lon = round($_GET['lon']*4, 0)/4;
 
         if (is_float($lat) && is_float($lon)) {
             return " WHERE `lat` = %f AND `lon` = %f AND type = %s ORDER BY `month`";
         } else {
-
             return "";
-
         }
     }
 
@@ -108,7 +140,5 @@ class GetWinddata {
     }
 
 }
-
-
 
 ?>

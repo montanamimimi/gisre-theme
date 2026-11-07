@@ -45,25 +45,25 @@
     <section class="about">
         <div class="container">
             <div class="about__container">
-                <div class="about__image">
-                    <img src="<?php echo get_theme_file_uri('/assets/images/renewable-energy-montage.jpg') ?>" alt="">
-                </div>
                 <div class="about__text">
                     <h2 class="about__header"><?php echo __('О проекте', 'gisre-theme'); ?></h2>
                     <p>
                     <?php 
 
                     if (get_locale() == "ru_RU") {
-                        $abou_text = get_field('about_project_ru', 'options');
+                        $about_text = get_field('about_project_ru', 'options');
                     } else {
-                        $abou_text = get_field('about_project_en', 'options');
+                        $about_text = get_field('about_project_en', 'options');
                     }
-                    echo $abou_text;
-                    
+                    echo $about_text;                    
                     ?>
                     
                     </p>
+                </div>                
+                <div class="about__image">
+                    <img src="<?php echo get_theme_file_uri('/assets/images/renewable-energy-montage.jpg') ?>" alt="">
                 </div>
+
             </div>
         </div>
     </section>

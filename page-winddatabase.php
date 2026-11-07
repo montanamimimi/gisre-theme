@@ -2,13 +2,15 @@
 require_once get_template_directory() . '/includes/Database.php';
 $winddata = new GetWinddata();
 
+if (isset($_GET['wtype'])) {
+    $type = $_GET['wtype'];
+} else {
+    $type = "";
+}
+
 get_header(); ?>
 
-
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=b6a7a43d-4ce5-45d6-9b18-5eb8015dbbfa" type="text/javascript"></script>
-
-
-
 
 <section class="single-banner">
   <div class="container">
@@ -17,8 +19,6 @@ get_header(); ?>
     </div>
   </div>
 </section>
-
-
 
 <section>
     <div class="container db-container">
@@ -38,13 +38,13 @@ get_header(); ?>
                         <div class="db-form__item">
                             <label for="lat"> Широта</label>
                             <input type="text" name="lat" id="lat"  required
-                            <?php if ($_GET['lat']) { echo ' value="' . $_GET['lat'] . '"'; } ?>
+                            <?php if (isset($_GET['lat'])) { echo ' value="' . $_GET['lat'] . '"'; } ?>
                             >
                         </div>
                         <div class="db-form__item">
                             <label for="lon"> Долгота</label>
                             <input type="text" name="lon" id="lon" required
-                            <?php if ($_GET['lon']) { echo ' value="' . $_GET['lon'] . '"'; } ?>
+                            <?php if (isset($_GET['lon'])) { echo ' value="' . $_GET['lon'] . '"'; } ?>
                             >
                         </div>
 
@@ -53,16 +53,16 @@ get_header(); ?>
                         <label for="model">Модель ВЭУ</label>
                         <select name="wtype" id="wtype">
                             <option value="komai"
-                            <?php if ($_GET['wtype'] == "komai") { echo 'selected="true"'; } ?>
+                            <?php if ($type == "komai") { echo 'selected="true"'; } ?>
                             >Komai_KWT300</option>
                             <option value="sieme"
-                            <?php if ($_GET['wtype'] == "sieme") { echo 'selected="true"'; } ?>
+                            <?php if ($type == "sieme") { echo 'selected="true"'; } ?>
                             >Siemens Gamesa SG 3.4-132</option>
                             <option value="lager"
-                            <?php if ($_GET['wtype'] == "lager") { echo 'selected="true"'; } ?>
+                            <?php if ($type == "lager") { echo 'selected="true"'; } ?>
                             >LagerweyL100</option>
                             <option value="vesta"
-                            <?php if ($_GET['wtype'] == "vesta") { echo 'selected="true"'; } ?>
+                            <?php if ($type == "vesta") { echo 'selected="true"'; } ?>
                             >VestasV126</option>
                         </select>
                     </div>
@@ -78,7 +78,7 @@ get_header(); ?>
 
             <?php 
             
-            if ($_GET['lat'] && $_GET['lon'])  {  
+            if (isset($_GET['lat']) && isset($_GET['lon']))  {  
                 echo '<p>Показаны данные для: <br> Широта: ' . $_GET['lat'] . '&deg;, Долгота: ' . $_GET['lon'] . '&deg;</p>';
 
                 if (!$winddata->data) {
@@ -135,23 +135,11 @@ function init () {
 <section>
     <div class="container">
         <?php if ($winddata->data) { ?>
-
             <h3>Данные по производительности ВЭУ:</h3>
-
-            
         
-                <?php 
-                
-                echo $winddata->generateTable();
-                               
-                ?>
-
-
-
-
+                <?php echo $winddata->generateTable(); ?>
            
         <?php } ?>
-
 
         <div class="db-description">
             <h3></h3>
