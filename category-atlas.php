@@ -1,10 +1,11 @@
 <?php get_header(); ?>
 
-<?php pageBanner(array(
-  'title' => "Атлас ресурсов солнечной энергии",
-  'desc' => ""
-)); ?>
-
+<?php 
+get_template_part('template-parts/page-banner', null, [
+    'title' => __('Атлас ресурсов солнечной энергии', 'gisre-theme'),
+    'desc'  => '',
+]); 
+?>
 
 <section class="cards">
     <div class="container">

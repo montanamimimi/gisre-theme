@@ -1,10 +1,11 @@
 <?php get_header(); ?>
 
-<?php pageBanner(array(
-  'title' => 'Видео контент',
-  'desc' => 'Видеоматериалы и записи научных конференций'
-)); ?>
-
+<?php 
+get_template_part('template-parts/page-banner', null, [
+    'title' => __('Видео контент', 'gisre-theme'),
+    'desc'  => '<p>' . __('Видеоматериалы и записи научных конференций', 'gisre-theme') . '</p>',
+]); 
+?>
 
 <section>
   <div class="container">

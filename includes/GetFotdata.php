@@ -1,6 +1,10 @@
 <?php 
 
 class GetFotdata {
+
+    private $arg;
+    public $data;
+
     function __construct() {
         global $wpdb;
         $tablename = $wpdb->prefix . 'photovoltaic';

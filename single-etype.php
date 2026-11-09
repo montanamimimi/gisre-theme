@@ -2,11 +2,21 @@
 
 
 
-<?php etypeBanner(array(
-  'title' => get_the_title(),
-  'desc' => get_the_excerpt(),
-  'image' => get_the_post_thumbnail_url()
-)); ?>
+<?php 
+// etypeBanner(array(
+//   'title' => get_the_title(),
+//   'desc' => get_the_excerpt(),
+//   'image' => get_the_post_thumbnail_url()
+// ));
+ ?>
+
+<?php 
+get_template_part('template-parts/etype-banner', null, [
+    'title' => get_the_title(),
+    'desc'  => get_the_excerpt(),
+    'image' => get_the_post_thumbnail_url()
+]); 
+?>
 
 <section class="single-text">
   <div class="container">

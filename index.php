@@ -1,10 +1,11 @@
 <?php get_header(); ?>
 
-<?php pageBanner(array(
-  'title' => 'Новости',
-  'desc' => '<p>Последние новости в мире возобновляемой энергетики</p>'
-)); ?>
-
+<?php 
+get_template_part('template-parts/page-banner', null, [
+    'title' => __('Новости', 'gisre-theme'),
+    'desc'  => '<p>' . __('Последние новости в мире возобновляемой энергетики', 'gisre-theme') . '</p>',
+]); 
+?>
 
 
   <section class="catlist">

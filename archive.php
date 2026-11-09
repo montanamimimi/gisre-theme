@@ -1,9 +1,11 @@
 <?php get_header(); ?>
 
-<?php pageBanner(array(
-  'title' => get_the_archive_title(),
-  'desc' => get_the_archive_description()
-)); ?>
+<?php 
+get_template_part('template-parts/page-banner', null, [
+    'title' => get_the_archive_title(),
+    'desc'  => get_the_archive_description(),
+]); 
+?>
 
 <section>
   <div class="container">

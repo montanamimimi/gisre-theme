@@ -10,8 +10,13 @@ if (($category[0]->term_id == 28) OR ($category[0]->term_id == 54)) {
 $prevPost = get_previous_post();
 $nextPost = get_next_post();
 
-$prevPostCategory = get_the_category($prevPost->ID);
-$nextPostCategory = get_the_category($nextPost->ID);
+if ($nextPost) {
+  $nextPostCategory = get_the_category($nextPost->ID);
+}
+
+if ($prevPost) {
+  $prevPostCategory = get_the_category($prevPost->ID);
+}
 
 ?>
 

@@ -190,6 +190,10 @@ p {
   padding: 4px 8px;
 }
 
+.wp-block-button__link {
+  color: white !important;
+}
+
 .header__container {
   display: flex;
   justify-content: space-between;

@@ -13,3 +13,9 @@
 .btn--small {
     padding: 4px 8px;
 }
+
+.wp-block-button {
+    &__link {        
+        color: white !important;
+    }
+}
