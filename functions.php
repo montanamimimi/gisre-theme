@@ -19,7 +19,7 @@ class GisreTheme {
         add_action('pre_get_posts', [ $this, 'queries' ]);
         add_action( 'init', [ $this, 'settings'] );
         add_filter('rest_authentication_errors', [ $this, 'closeRestApi' ]);
-        // show_admin_bar(false);
+        show_admin_bar(false);
     }
 
     public function gisreCustomRest()
